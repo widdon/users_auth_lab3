@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@plugin 'daisyui' {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+/* Вариант dark: привязан к атрибуту data-theme (его ставит переключатель темы), а не к системной теме */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
